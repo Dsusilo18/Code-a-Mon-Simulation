@@ -3,3 +3,6 @@ jdk: openjdk11
 
 before_script:
 chmod +x gradle/wrapper/gradle_wrapper.jar
+
+script:
+./gradlew build
