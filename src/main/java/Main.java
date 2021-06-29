@@ -16,20 +16,9 @@ public class Main {
         Trainer john;
         Trainer ash;
         Simulation sim;
-        Scanner input = new Scanner(System.in, "UTF-8");
-        System.out.println("How many simulations would you like to run?");
-        int times = input.nextInt();
-        int i = 1;
-        while (times != 0) {
-            System.out.println("\nSimulation: " + i + "");
-            System.out.println("---------------------------\n");
             john = new Trainer("John");
             ash = new Trainer("Ash");
             sim = new Simulation(ash, john);
             sim.init();
-            times--;
-            i++;
-        }
-
     }
 }
