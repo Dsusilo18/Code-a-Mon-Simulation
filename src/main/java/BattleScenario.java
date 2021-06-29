@@ -51,7 +51,7 @@ public class BattleScenario {
         System.out.println("\nBattle with a wild " + mon2.getType()
                 + " code-a-mon is about to begin!");
         winner = fightWild();
-        if (winner.getAtt() == mon1.getAtt() && winner.getDef() == mon1.getDef()) {
+        if (winner.equals(mon1)) {
             System.out.println(person1.getName() + " has won with a "
                     + mon1.getType() + " code-a-mon with "
                     + winner.getHealth() + " health left");
@@ -67,7 +67,7 @@ public class BattleScenario {
         System.out.println("\nBattle with two trainers is about to begin!");
 
         winner = fightTrain();
-        if (winner.getAtt() == mon1.getAtt() && winner.getDef() == mon1.getDef()) {
+        if (winner.equals(mon1)) {
             System.out.println(person1.getName() + " has won with a "
                     + mon1.getType() + " code-a-mon with "
                     + winner.getHealth() + " health left");
@@ -191,16 +191,10 @@ public class BattleScenario {
                 if (pdefender.getType().equals("Fire")) {
                     pattacker.setTypeBonus(1.25);
                     pdefender.setTypeBonus(0.75);
-                } else if (pdefender.getType().equals("Grass")) {
-                    pattacker.setTypeBonus(0.75);
-                    pdefender.setTypeBonus(1.25);
                 }
                 break;
             case "Grass":
-                if (pdefender.getType().equals("Water")) {
-                    pattacker.setTypeBonus(1.25);
-                    pdefender.setTypeBonus(0.75);
-                } else if (pdefender.getType().equals("Fire")) {
+                if (pdefender.getType().equals("Fire")) {
                     pattacker.setTypeBonus(0.75);
                     pdefender.setTypeBonus(1.25);
                 }

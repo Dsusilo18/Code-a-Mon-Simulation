@@ -104,22 +104,27 @@ public class Simulation {
     public void checkEvo(int index) {
         MonsterFactory monsFact = new MonsterFactory();
         if (index != 7) {
-            Monster temp = person1.getIndMons();
-            int lvl = temp.getLevel();
-            if (lvl % 2 == 0) {
-                String type = temp.getType();
+            int lvl = person1.getLevel();
+            if (lvl % 5 == 0) {
+                String type = person1.getIndMons().getType();
                 person1.setMons(monsFact.getInstance(type, true));
                 person1.setLevel(lvl + 1);
                 System.out.println(person1.getName() + "'s code-a-mon have evolved"
                         + " at level: " + lvl);
             } else {
                 person1.setLevel(lvl + 1);
+                System.out.println(person1.getClass() + "'s code-a-mon is now "
+                        + "level: " + person1.getLevel());
             }
         } else {
             System.out.println("\n" + person1.getName() + " has " + victories + " victories!");
             System.out.println("End of simulation.");
             gameContinue = false;
         }
+    }
+    
+    public Trainer getTrainer(){
+        return person1;
     }
 
 }

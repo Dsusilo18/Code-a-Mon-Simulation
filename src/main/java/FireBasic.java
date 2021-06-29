@@ -14,6 +14,7 @@ public class FireBasic extends MonsterDecorator {
 
     public FireBasic(Monster mons) {
         super(mons);
+        super.setStats(70, 40, 90);
     }
 
     public String getType() {

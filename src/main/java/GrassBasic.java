@@ -14,6 +14,7 @@ public class GrassBasic extends MonsterDecorator {
 
     public GrassBasic(Monster mons) {
         super(mons);
+        super.setStats(30, 65, 105);
     }
 
     public String getType() {

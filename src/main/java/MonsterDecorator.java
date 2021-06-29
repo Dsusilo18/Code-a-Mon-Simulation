@@ -75,6 +75,11 @@ public class MonsterDecorator implements Monster {
     public String getType() {
         return mons.getType();
     }
+
+    @Override
+    public void setStats(int attk, int deff, int hlth) {
+        mons.setStats(attk, deff, hlth);
+    }
 }
 
 

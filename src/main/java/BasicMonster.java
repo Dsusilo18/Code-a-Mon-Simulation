@@ -41,6 +41,12 @@ public class BasicMonster implements Monster {
         weatherBonus = 1.0;
         typeBonus = 1.0;
     }
+    
+    public void setStats(int attk, int deff, int hlth){
+        att = attk;
+        def = deff;
+        health = hlth;
+    }
 
     @Override
     public void assemble() {

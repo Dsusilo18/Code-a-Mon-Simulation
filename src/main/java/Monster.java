@@ -23,6 +23,8 @@ interface Monster {
     public double getHealth();
 
     public void setHealth(double newHealth);
+    
+    public void setStats(int attk, int deff, int hlth);
 
     public int getLevel();
 

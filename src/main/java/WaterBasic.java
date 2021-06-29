@@ -14,6 +14,7 @@ public class WaterBasic extends MonsterDecorator {
 
     public WaterBasic(Monster mons) {
         super(mons);
+        super.setStats(60, 40, 100);
     }
 
     public String getType() {
