@@ -131,8 +131,6 @@ public class Simulation {
                         + " at level: " + lvl);
             } else {
                 person1.setLevel(lvl + 1);
-                System.out.println(person1.getClass() + "'s code-a-mon is now "
-                        + "level: " + person1.getLevel());
             }
         } else {
             System.out.println("\n" + person1.getName() + " has " + victories + " victories!");
