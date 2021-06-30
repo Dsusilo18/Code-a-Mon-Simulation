@@ -1,5 +1,4 @@
 
-
 public class Environment {
 
     private Weather weatherType;
@@ -12,6 +11,12 @@ public class Environment {
         this(Weather.neutral);
     }
 
+    /**
+     * A constructor for when a specific weather is to be associated with the
+     * environment.
+     *
+     * @param weather the weather type to be inserted into the environment.
+     */
     public Environment(Weather weather) {
         this.weatherType = weather;
         this.buffModifier = 1.25;

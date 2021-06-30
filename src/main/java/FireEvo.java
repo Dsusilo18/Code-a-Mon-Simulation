@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * An object class that uses the Decorator design pattern to edit a basic fire
+ * type code-a-mon and add more attack point as a reward for evolving.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 public class FireEvo extends MonsterDecorator {
 

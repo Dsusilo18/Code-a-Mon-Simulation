@@ -1,16 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 /**
+ * Tests the MonsterFactory class to see if it can actually create different 
+ * type of code-a-mon and if it can created evolved types as well.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import static org.junit.Assert.assertNotEquals;
+
+import org.junit.Test;
+
 public class MonsterFactoryTest {
 
     MonsterFactory monFact;

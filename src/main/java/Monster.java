@@ -1,14 +1,10 @@
 
-import java.util.Random;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
+ * An interface class for code-a-mons. It keeps all the methods needed so that
+ * you can set and get data about code-a-mons easily.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 interface Monster {
 
@@ -23,7 +19,7 @@ interface Monster {
     public double getHealth();
 
     public void setHealth(double newHealth);
-    
+
     public void setStats(int attk, int deff, int hlth);
 
     public int getLevel();

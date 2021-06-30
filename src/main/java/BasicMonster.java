@@ -1,16 +1,13 @@
 
-import java.util.Random;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
+ * Used as a base class for the Decorator design pattern. Used to contain any
+ * basic feature of a monster.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import java.util.Random;
+
 public class BasicMonster implements Monster {
 
     private int att;
@@ -30,6 +27,11 @@ public class BasicMonster implements Monster {
         this.setNewStats();
     }
 
+    /**
+     * Used to initialize all the stats for the code-a-mon by creating random
+     * numbers.
+     *
+     */
     public void setNewStats() {
         int stats = numGen.nextInt(101);
         att = stats;
@@ -41,8 +43,15 @@ public class BasicMonster implements Monster {
         weatherBonus = 1.0;
         typeBonus = 1.0;
     }
-    
-    public void setStats(int attk, int deff, int hlth){
+
+    /**
+     * Used to set specific stat points for the code-a-mon.
+     *
+     * @param attk is the attack point that is to be set.
+     * @param deff is the defend point that is to be set.
+     * @param hlth is the health point that is to be set.
+     */
+    public void setStats(int attk, int deff, int hlth) {
         att = attk;
         def = deff;
         health = hlth;

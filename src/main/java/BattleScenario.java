@@ -9,12 +9,25 @@ public class BattleScenario {
     private Environment battleWeather;
     private Monster winner;
 
+    /**
+     * Constructor for when a trainer is going to fight a wild code-a-mon that
+     * doesn't have a trainer.
+     *
+     * @param person is the trainer that is battling a random code-a-mon.
+     * @param pmon is the random code-a-mon that is battling the trainer.
+     */
     public BattleScenario(Trainer person, Monster pmon) {
         person1 = person;
         setMon1(person1.getIndMons());
         setMon2(pmon);
     }
 
+    /**
+     * Constructor for when a Trainer is going to fight another Trainer.
+     *
+     * @param person a trainer that is battling.
+     * @param personTwo another trainer that is in the fight.
+     */
     public BattleScenario(Trainer person, Trainer personTwo) {
         person1 = person;
         person2 = personTwo;
@@ -24,10 +37,10 @@ public class BattleScenario {
 
     /**
      * Sets environment of the battlefield, and sets buff/debuff modifiers for
-     * all Mascotmons on the field. If the Mascotmon's type is buffed by the
+     * all Code-a-mon on the field. If the Code-a-mon's type is buffed by the
      * environment,they receive a 25% multiplier to their attack and defense
-     * stat. If the Mascotmon's type is debuffed by the environment, they
-     * receive a reduction of 25% to their attack and defense stat.
+     * stat. If the code-a-mon type is debuffed by the environment, they receive
+     * a reduction of 25% to their attack and defense stat.
      *
      */
     public void setEnvironment(Environment.Weather pweather) {
@@ -43,8 +56,10 @@ public class BattleScenario {
     }
 
     /**
-     * winner is moved to a public class variable so that the method can be
-     * tested.
+     * Simulate battle with a wild code-a-mon that doesn't have any trainer.
+     *
+     * @return an index to show if the main trainer still have a code-a-mon that
+     * is healthy or not.
      */
     public int initiateBattleWild() {
         System.out.println("The weather today is " + battleWeather.getWeather() + "!");
@@ -62,6 +77,13 @@ public class BattleScenario {
         }
     }
 
+    /**
+     * Simulate battle with two trainers that are fighting with one code-a-mon
+     * each.
+     *
+     * @return an index to show if the main trainer still have a code-a-mon that
+     * is healthy or not.
+     */
     public int initiateBattle() {
         System.out.println("The weather today is " + battleWeather.getWeather() + "!");
         System.out.println("\nBattle with two trainers is about to begin!");
@@ -83,9 +105,10 @@ public class BattleScenario {
     }
 
     /**
-     * Sample fight scenario of two rounds. Each Mascotmon uses one random
-     * attack per round; this attack multiplier is used to calculate damage
-     * output against opposing mascotmon.
+     * Simulate and calculate damages and determine a winner for a fight between
+     * two trainers.
+     *
+     * @return the code-a-mon that won the fight.
      */
     public Monster fightTrain() {
         int round = 1;
@@ -122,6 +145,12 @@ public class BattleScenario {
         } //end while
     }
 
+    /**
+     * Simulate and calculate damages and determine a winner for a fight between
+     * a trainer and a wild code-a-mon.
+     *
+     * @return the code-a-mon that won the fight.
+     */
     public Monster fightWild() {
         int round = 1;
         double damage1;
@@ -164,6 +193,16 @@ public class BattleScenario {
         mon2 = pmon;
     }
 
+    /**
+     * Calculates the damage given to a defending code-a-mon from an attacking
+     * code-a-mon.Makes sure that there is type bonus and weather bonus in
+     * affect.
+     *
+     * @param pattack the attack point that the atacking code-a-mon have.
+     * @param pattacker the attacking code-a-mon.
+     * @param pdefender the defending code-a-mon.
+     * @return
+     */
     public double calculateDamage(int pattack, Monster pattacker, Monster pdefender) {
 
         if (pattacker.getType().equals(battleWeather.getBuffedType())) {

@@ -1,32 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
+ * A test to see if all the methods in the BattleScenerio class are all working
+ * properly and that battles and fights can be simulated properly. Also makes
+ * sure that CalculateDamage takes Type bonus and weather bonus in consideration.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
 public class BattleScenarioTest {
 
     MonsterFactory monFact;
-    Trainer Drake;
-    Trainer John;
+    Trainer drake;
+    Trainer john;
     Monster randomMon;
     BattleScenario trainBattle;
     BattleScenario wildBattle;
 
+    /**
+     * Tests the constructor to see if a new battle scenario can be created and
+     * that the trainers are accepted and stored.
+     */
     public BattleScenarioTest() {
         monFact = new MonsterFactory();
-        Drake = new Trainer("drake");
-        John = new Trainer("john");
+        drake = new Trainer("drake");
+        john = new Trainer("john");
         randomMon = monFact.getInstance("Water", false);
-        trainBattle = new BattleScenario(Drake, John);
-        wildBattle = new BattleScenario(Drake,
+        trainBattle = new BattleScenario(drake, john);
+        wildBattle = new BattleScenario(drake,
                 randomMon);
 
     }
@@ -46,8 +51,8 @@ public class BattleScenarioTest {
         int answer = wildBattle.initiateBattleWild();
         assertNotNull(wildBattle.getWin());
         if (answer != 7) {
-            assertEquals(Drake.getIndMons().getAtt(), wildBattle.getWin().getAtt());
-            assertEquals(Drake.getIndMons().getDef(), wildBattle.getWin().getDef());
+            assertEquals(drake.getIndMons().getAtt(), wildBattle.getWin().getAtt());
+            assertEquals(drake.getIndMons().getDef(), wildBattle.getWin().getDef());
         } else if (answer == 7) {
             assertEquals(randomMon.getAtt(), wildBattle.getWin().getAtt());
             assertEquals(randomMon.getDef(), wildBattle.getWin().getDef());
@@ -60,11 +65,11 @@ public class BattleScenarioTest {
         int answer = trainBattle.initiateBattle();
         assertNotNull(trainBattle.getWin());
         if (answer != 7) {
-            assertEquals(Drake.getIndMons().getAtt(), trainBattle.getWin().getAtt());
-            assertEquals(Drake.getIndMons().getDef(), trainBattle.getWin().getDef());
+            assertEquals(drake.getIndMons().getAtt(), trainBattle.getWin().getAtt());
+            assertEquals(drake.getIndMons().getDef(), trainBattle.getWin().getDef());
         } else if (answer == 7) {
-            assertEquals(John.getIndMons().getAtt(), trainBattle.getWin().getAtt());
-            assertEquals(John.getIndMons().getDef(), trainBattle.getWin().getDef());
+            assertEquals(john.getIndMons().getAtt(), trainBattle.getWin().getAtt());
+            assertEquals(john.getIndMons().getDef(), trainBattle.getWin().getDef());
         }
     }
 

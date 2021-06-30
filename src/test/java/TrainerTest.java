@@ -1,21 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
+ * Test to see if the Trainer class conatins any methods that doesn't function
+ * properly. Makes ure that only a certain amount of code-a-mon can be obtained
+ * by a trainer, makes sure that only valid numbers can be considered as a level
+ * when setting levels for a code-a-mon and make sure that you can set a
+ * code-a-mon for the trainer.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
 public class TrainerTest {
 
     Trainer john;
     Trainer paul;
 
+    /**
+     * Tests to see if the consturctor will create a new trainer object and
+     * store the name of the trainers inserted as a parameter.
+     */
     public TrainerTest() {
         john = new Trainer("john");
         assertEquals("john", john.getName());

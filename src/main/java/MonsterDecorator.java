@@ -1,12 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * A decorator class for the Decorator design pattern that is used by other
+ * classes to quickly modify the existing basic class. In this case, to quickly
+ * modify the Basic code-a-mon into an evolved type or just a less basic type.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 public class MonsterDecorator implements Monster {
 
@@ -81,7 +80,3 @@ public class MonsterDecorator implements Monster {
         mons.setStats(attk, deff, hlth);
     }
 }
-
-
-
-

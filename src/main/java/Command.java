@@ -1,13 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * Used as an interface for the Mediator design pattern. Used to contain the
+ * method needed by objects that are trying to use the Mediator.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 public interface Command {
+
     void battle();
 }

@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * Used as an object class that uses the Decorator design pattern. Used to
+ * initialize and create a basic grass type code-a-mon.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 public class GrassBasic extends MonsterDecorator {
 

@@ -1,23 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import junit.framework.Assert;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
+ * A test to see if all the methods in the simulation class are all working
+ * properly and that the simulation as a whole will work. Makes sure that a
+ * code-a-mon is able to evolve after every 5 levels.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+
 public class SimulationTest {
 
     private Trainer person1;
     private Trainer person2;
     Simulation sim;
 
+    /**
+     * Tests the constructor to see if a new simulation object can be created
+     * with the specific trainers.
+     */
     public SimulationTest() {
         person1 = new Trainer("john");
         person2 = new Trainer("paul");

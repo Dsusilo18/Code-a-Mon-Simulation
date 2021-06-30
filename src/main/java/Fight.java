@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * Used as an object class for the Mediator design pattern to initialize a
+ * fight that is needed to start and that requires an arena to start.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 public class Fight implements Command {
 

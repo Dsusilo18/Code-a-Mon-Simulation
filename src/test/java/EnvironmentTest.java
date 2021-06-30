@@ -1,17 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import junit.framework.Assert;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
+ * A test to see if an Environment object can be created and that its setters
+ * and getters function properly.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+
+import org.junit.Test;
+
 public class EnvironmentTest {
 
     Environment env;
@@ -23,7 +22,7 @@ public class EnvironmentTest {
 
     @Test
     public void testGetBuffedType() {
-        assertNotEquals("Water",env.getBuffedType());
+        assertNotEquals("Water", env.getBuffedType());
         env = new Environment(newWeather.rainy);
         assertEquals("Water", env.getBuffedType());
         env = new Environment(newWeather.sunny);

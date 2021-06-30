@@ -1,24 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import org.junit.Assert;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
+ * A test to see if all the getters and setters of the BasicMonster 
+ * class functions properly.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import org.junit.Assert;
+import org.junit.Test;
+
 public class BasicMonsterTest {
 
     BasicMonster baseMon;
 
     public BasicMonsterTest() {
         baseMon = new BasicMonster();
-        assertEquals(1.0, baseMon.getTypeBonus(), 0.1);
+        Assert.assertEquals(1.0, baseMon.getTypeBonus(), 0.1);
     }
 
     @Test
@@ -88,7 +85,7 @@ public class BasicMonsterTest {
 
     @Test
     public void testGetType() {
-         Assert.assertNotNull(baseMon.getType());
+        Assert.assertNotNull(baseMon.getType());
     }
 
 }

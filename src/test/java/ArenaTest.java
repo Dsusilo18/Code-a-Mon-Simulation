@@ -1,16 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
+ * A test for the arena class to see if the constructor and when the battle
+ * method is called, no other fight can occur afterward unless the first one
+ * ended.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 public class ArenaTest {
 
     Arena zone;

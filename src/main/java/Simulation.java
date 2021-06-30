@@ -1,15 +1,12 @@
 
-import java.util.Random;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
+ * The main class that handles the actual game simulation and all its event.
  *
  * @author daryl
+ * @version 6/29/2021
  */
+import java.util.Random;
+
 public class Simulation {
 
     private Trainer person1;
@@ -25,6 +22,12 @@ public class Simulation {
         person2 = newTrainer2;
     }
 
+    /**
+     * A method used to randomly generate new code-a-mon and is used for
+     * battling with wild code-a-mon.
+     *
+     * @return the newly created code-a-mon.
+     */
     public Monster monsGenerator() {
         int typeSelector = rand.nextInt(3);
         MonsterFactory monsFact = new MonsterFactory();
@@ -41,6 +44,10 @@ public class Simulation {
         return null;
     }
 
+    /**
+     * A method used to switch the day variable from day to night or vice versa
+     * after every cycle.
+     */
     public void switchDay() {
         if (day.equals("day")) {
             day = "night";
@@ -49,6 +56,10 @@ public class Simulation {
         }
     }
 
+    /**
+     * The method that starts the cycles of the simulation and handles all event
+     * of the simulation.
+     */
     public void init() {
         boolean firstTime = true;
         System.out.println("Start of code-a-mon game simulation");
@@ -101,6 +112,13 @@ public class Simulation {
 
     }
 
+    /**
+     * Checks to see if the code-a-mon can be evolved or if the simulation
+     * should end because the trainer have no more code-a-mon to fight with.
+     *
+     * @param index the determining factor to know if the trainer still have a 
+     * code-a-mon to fight with.
+     */
     public void checkEvo(int index) {
         MonsterFactory monsFact = new MonsterFactory();
         if (index != 7) {
@@ -122,8 +140,8 @@ public class Simulation {
             gameContinue = false;
         }
     }
-    
-    public Trainer getTrainer(){
+
+    public Trainer getTrainer() {
         return person1;
     }
 

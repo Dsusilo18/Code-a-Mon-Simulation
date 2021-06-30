@@ -1,9 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+/**
+ * Used as a mediator class for the Mediator design pattern. Used to register
+ * and store fight and arena information and keeps info on whether an arena is
+ * available or not.
+ *
+ * @author daryl
+ * @version 6/29/2021
+ */
 public class BattleArenaMed implements BattleArena {
 
     private Fight fightB;

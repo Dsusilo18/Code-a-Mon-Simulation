@@ -1,12 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
+ * Interface containing all the necessary methods for classes needed for
+ * the Mediator design pattern.
  *
  * @author daryl
+ * @version 6/29/2021
  */
 public interface BattleArena {
 
@@ -18,4 +16,3 @@ public interface BattleArena {
 
     public Boolean isAvailable();
 }
-
