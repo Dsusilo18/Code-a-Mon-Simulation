@@ -101,8 +101,10 @@ public class Simulation {
                 Environment genWeather = gen.getEnv();
                 battle.setEnvironment(genWeather.getWeather());
                 checkEvo(battle.initiateBattleWild());
+                if(gameContinue){
                 System.out.println(person1.getName() + " caught a new code-a-mon!");
                 person1.obtMons(newMons);
+                }
 
                 fightSimTwo.battleOver();
             }
@@ -131,6 +133,8 @@ public class Simulation {
                         + " at level: " + lvl);
             } else {
                 person1.setLevel(lvl + 1);
+                System.out.println(person1.getClass() + "'s code-a-mon is now "
+                        + "level: " + person1.getLevel());
             }
         } else {
             System.out.println("\n" + person1.getName() + " has " + victories + " victories!");
