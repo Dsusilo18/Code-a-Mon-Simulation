@@ -1,4 +1,4 @@
-# -ser316-summer2021-C-dsusilo-DP
+# Code-a-Mon-Simulation
 [Decorator Design Pattern]
 - Use Decorator design pattern for evolutions by using a Monster interface, a BasicMonster class that implements Monster, a MonsterDecorator class that implements Monster,
 then multiple classes that extends MonsterDecorator. Allows for basic monsters of specific types to be created out of a basic monster with a neutral type and alter its stats.
