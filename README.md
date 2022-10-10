@@ -23,3 +23,6 @@ period.
 code-a-mons after each battle with only wild code-a-mons. [2]This mediator class also fulfills the requirement of the simulations running on cycles of day and nights because 
 the cycle changes after each battle, the battle that is mediated by the mediator class. [3]Lastly, since the day cycles after each battle simulation, this pattern fulfills 
 the requirement of each cycles having its own weather event as eveytimg the day cycels, a new weather is chosen for that day.
+
+** Technologies Used:**  
+TravisCI, Java, Spotsbug, Gradle
