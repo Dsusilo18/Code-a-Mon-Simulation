@@ -1,5 +1,6 @@
 # Code-a-Mon-Simulation
 
+A simulation of a battle between two monster trainers with randomly generated types of code-a-mon. The chances of a Code-a-mon winning depends on their stats, buffers and debuffers. If the main trainer wins against another trainer, more battles will proceed with wild code-a-mon untill the trainer loses. Every battle will take place during the day or night as well as during a randomly generated weather. Every time the trainer wins, his code-a-mon will also level up.  
 ## Design Patterns:
 - Decorator Design Pattern: Use Decorator design pattern for evolutions by using a Monster interface, a BasicMonster class that implements Monster, a MonsterDecorator class that implements Monster,
 then multiple classes that extends MonsterDecorator. Allows for basic monsters of specific types to be created out of a basic monster with a neutral type and alter its stats.
