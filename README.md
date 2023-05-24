@@ -1,6 +1,6 @@
 # Code-a-Mon-Simulation
 
-**Design Patterns:**
+## Design Patterns:
 - Decorator Design Pattern: Use Decorator design pattern for evolutions by using a Monster interface, a BasicMonster class that implements Monster, a MonsterDecorator class that implements Monster,
 then multiple classes that extends MonsterDecorator. Allows for basic monsters of specific types to be created out of a basic monster with a neutral type and alter its stats.
 It also allows evolved types of the basic monster of specific types to be created from the basic monster with neutral type with buffed stats that are different for each 
@@ -26,7 +26,16 @@ the cycle changes after each battle, the battle that is mediated by the mediator
   3. Lastly, since the day cycles after each battle simulation, this pattern fulfills 
 the requirement of each cycles having its own weather event as eveytimg the day cycels, a new weather is chosen for that day.
 
-**Technology Used:**  
+## Build *To run this project, use Gradle. 
+gradle build
+
+## Usage   
+gradle run
+
+## Run test   
+gradle test
+
+## Technology Used: 
 - TravisCI
 - Java
 - Spotsbug
