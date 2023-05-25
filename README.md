@@ -1,7 +1,14 @@
 # Code-a-Mon-Simulation
 
-A simulation of a battle between two monster trainers with randomly generated types of code-a-mon. The chances of a Code-a-mon winning depends on their stats, buffers and debuffers. If the main trainer wins against another trainer, more battles will proceed with wild code-a-mon untill the trainer loses. Every battle will take place during the day or night as well as during a randomly generated weather. Every time the trainer wins, his code-a-mon will also level up.  
-## Design Patterns:
+A simulation of a battle between two monster trainers with randomly generated types of Code-a-mon. The chances of a Code-a-mon winning depends on their types, stats, buffers and debuffers. If the main trainer wins against another trainer, more battles will proceed with wild Code-a-mon untill the trainer loses. Every battle will take place during the day or night as well as during a randomly generated weather. Every time the trainer wins, his Code-a-mon will also level up and eventually evolve to become stronger.
+
+## Project Difficulties:    
+While creating this project, it was challenging to figure out how many and what object classes were needed and how design patterns would be able to be implemented. Another thing that was a challenge was discovering how to integrate the type, buffer and debuffer of the Code-a-mon during battle scenerios. 
+
+## My Solution:   
+Create a UML diagram in order to understand what data and functions goes into what class. The diagram also helps in showing how each class object connects with one another as there are classes that has, uses or implemenmts other classes. In order to have the type of Code-a-mon, weather buffer and debuffer affect the outcome of the battles, I created a function to calculate the damage given to a defending Code-a-mon from an attacking Code-a-mon. In this fucntion, the attacker and defender's type would be analysed 
+
+## Design Patterns Used:
 - Decorator Design Pattern: Use Decorator design pattern for evolutions by using a Monster interface, a BasicMonster class that implements Monster, a MonsterDecorator class that implements Monster,
 then multiple classes that extends MonsterDecorator. Allows for basic monsters of specific types to be created out of a basic monster with a neutral type and alter its stats.
 It also allows evolved types of the basic monster of specific types to be created from the basic monster with neutral type with buffed stats that are different for each 
