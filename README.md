@@ -1,6 +1,6 @@
 # Code-a-Mon-Simulation
 
-A simulation of a battle between two monster trainers with randomly generated types of Code-a-mon. The chances of a Code-a-mon winning depends on their types, stats, buffers and debuffers. If the main trainer wins against another trainer, more battles will proceed with wild Code-a-mon untill the trainer loses. Every battle will take place during the day or night as well as during a randomly generated weather. Every time the trainer wins, his Code-a-mon will also level up and eventually evolve to become stronger.
+A simulation of a monster trainer battling another trainer with randomly generated types of Code-a-mons as well as other wild Code-a-mons. The chances of a Code-a-mon winning depends on their types, stats, buffers and debuffers. If the main trainer wins against another trainer, more battles will proceed with wild Code-a-mon untill the trainer loses. Every battle will take place during the day or night as well as during a randomly generated weather. Every time the trainer wins, his Code-a-mon will also level up and eventually evolve to become stronger.
 
 ## Project Difficulties:    
 While creating this project, it was challenging to figure out how many and what object classes were needed and how design patterns would be able to be implemented. Another thing that was a challenge was discovering how to integrate the type, buffer and debuffer of the Code-a-mon during battle scenerios. 
